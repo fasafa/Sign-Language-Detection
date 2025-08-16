@@ -1,4 +1,6 @@
-# **Install YOLO11 via Ultralytics**
+# American Sign Language Detection
+
+## **Install YOLO11 via Ultralytics**
 
 
 ```python
