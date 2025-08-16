@@ -239,20 +239,7 @@ for img in glob.glob(f'{latest_folder}/*.jpg')[15:18]:
 ```
 
 
-    ---------------------------------------------------------------------------
-
-    ValueError                                Traceback (most recent call last)
-
-    /tmp/ipython-input-1005507424.py in <cell line: 0>()
-          4 
-          5 # Get the latest prediction folder for detection in Kaggle
-    ----> 6 latest_folder = max(glob.glob('/content/runs/detect/predict*/'), key=os.path.getmtime)
-          7 
-          8 # Display images from the prediction folder
-
-
-    ValueError: max() arg is an empty sequence
-
+  
 
 # **Predictions on Videos**
 
