@@ -226,30 +226,25 @@ IPyImage(filename=f'/content/runs/detect/train/val_batch0_pred.jpg', width=1000)
 
 
 ```python
-import glob
-import os
-from IPython.display import Image as IPyImage, display
+# Run YOLO on the first video for object detection
+!yolo task=detect mode=predict model=best.pt" conf=0.25 source="image.jpg" save=True
 
-# Get the latest prediction folder for detection in Kaggle
-latest_folder = max(glob.glob('/content/runs/detect/predict*/'), key=os.path.getmtime)
+# Results saved to runs/detect/predict
 
-# Display images from the prediction folder
-for img in glob.glob(f'{latest_folder}/*.jpg')[15:18]:
-    display(IPyImage(filename=img, width=300))
 ```
 
 
-  
-
 # **Predictions on Videos**
-
-
-
 ```python
 # Run YOLO on the first video for object detection
 !yolo task=detect mode=predict model=best.pt" conf=0.25 source="videos.mp4" save=True
 
-# Results saved to runs/detect/predict2
+# Results saved to runs/detect/predict
 
 ```
+
+
+
+
+
 
